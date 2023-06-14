@@ -15,6 +15,7 @@ export default function Loginpage() {
       credentials: 'include',
     });
     if (response.ok) {
+        alert('Login successful')
         setRedirect(true)
     } else {
         alert('wrong credential')
