@@ -14,6 +14,7 @@ export default function CreatePost() {
     data.set('content', content)
     data.set('file', files[0])
     ev.preventDefault()
+    console.log(files)
     const response = await fetch('http://localhost:4000/post', {
         method: 'POST',
         body: data,
@@ -36,7 +37,7 @@ export default function CreatePost() {
       />
       <input 
         type="file" 
-        onChange={ev => setFiles(ev.target.value)}
+        onChange={ev => setFiles(ev.target.files)}
       />
       <ReactQuill
         value={content}
