@@ -50,6 +50,16 @@ div.post{
   }
 }
 
+div.post div.image{
+  max-height: 200px;
+  max-width: 400px;
+}
+
+div.post div.image img{
+  height: 100%;
+  width: 100%;
+}
+
 div.post div.texts h2{
   margin: 0;
   font-size: 1.8rem;
@@ -76,6 +86,8 @@ div.post p.info a.author{
 div.post p.summary{
   margin: 10px 0;
   line-height: 1.4rem;
+  max-height: 70%;
+  overflow: hidden;
 }
 
 form.login, form.register{
@@ -94,6 +106,7 @@ input{
 }
 
 button{
+  cursor: pointer;
   width: 100%;
   display: block;
   background-color: #555;
@@ -114,7 +127,7 @@ div.post-page div.image{
 }
 
 div.post-page div.image img{
-  object-fit: cover;
+  object-fit: contain;
   object-position: center center;
   width: 100%;
 }
@@ -158,4 +171,9 @@ div.post-page a.edit-btn{
 
 a svg{
   height: 20px;
+}
+
+.username{
+  color: purple;
+  background-color: lightblue;
 }

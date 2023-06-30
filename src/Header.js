@@ -31,6 +31,7 @@ const {setUserInfo, userInfo} = useContext(UserContext)
         <nav>
         {username && (
           <>
+          <span className="username">Hello, {username}</span>
           <Link to="/create">Create new post</Link>
           <a onClick={logout}>Logout</a>
           </>
